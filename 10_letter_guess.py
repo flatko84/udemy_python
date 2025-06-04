@@ -30,7 +30,7 @@ class LetterGuess:
         while guessed is not True:
             guess = input()
             guessed = self.guess_letter(guess)
-            if guessed == True:
+            if guessed:
                 time_passed = datetime.datetime.now() - self.start_time
                 print("guessed!")
                 print(f"That's correct! Before: {self.before} times, after: {self.after} times, time to guess: {time_passed}")

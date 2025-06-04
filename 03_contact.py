@@ -17,7 +17,7 @@ class Contact:
         if not isinstance(other, Contact):
             return False
         return ((self.first_name == other.first_name and self.last_name == other.last_name) or
-            (self.phone != None and self.phone == other.phone) or (self.email != None and self.email == other.email))
+            (self.phone is not None and self.phone == other.phone) or (self.email is not None and self.email == other.email))
     
     def __hash__(self):
         return hash((self.first_name, self.last_name, self.phone, self.email))
